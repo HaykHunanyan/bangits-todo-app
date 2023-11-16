@@ -7,7 +7,7 @@
     justify-content: space-around;
 }
 .todo_list_row{
-    border: 3px solid gray;
+    border: 3px solid #dfbaba;
     width: 100%;
     text-align: center;
     >div{
@@ -16,7 +16,6 @@
         border-top: 1px solid black;
         margin-bottom: 10px;
         padding: 5px;
-        height: 106px;
         overflow: hidden;
     }
 }
@@ -25,10 +24,17 @@
     overflow-wrap: anywhere;
 }
 .open_section{
-    width:100%
+    width:100%;
+    >div{
+        min-height: 106px;
+        height: auto;
+    }
 }
 .close_section{
-    width: 10%;
+    width: 100%;
+    >div{
+        height: 106px;
+    }
 }
 .todo_list_title{
     white-space: nowrap;
@@ -36,3 +42,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+@media only screen and (max-width: 760px) {
+    .open_section{
+        width:100%
+    }
+    .close_section{
+        width: 10%;
+    }
+  }

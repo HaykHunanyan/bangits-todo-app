@@ -42,7 +42,7 @@ const EditableForm: React.FC<TaskItemProps> = ({ task,checkOverdue }) => {
             <Popover content={content} className='overflow_wrap'>
                 <Row onClick={() => task.status === 'pending' && setEditMode({...editMode,title:task.title})}>
                     <span>{task.title}</span>
-                    <EditOutlined/>
+                    <EditOutlined style={{color:'red'}}/>
                 </Row>
             </Popover>
           )}
@@ -65,7 +65,7 @@ const EditableForm: React.FC<TaskItemProps> = ({ task,checkOverdue }) => {
               <Popover content={content} className='overflow_wrap'>
                 <Row onClick={() => task.status === 'pending' && setEditMode({...editMode,description:task.description||''})}>
                     <span>{task.description}</span>
-                    <EditOutlined/>
+                    <EditOutlined style={{color:'red'}}/>
                  </Row>
               </Popover>
             )}
@@ -87,7 +87,7 @@ const EditableForm: React.FC<TaskItemProps> = ({ task,checkOverdue }) => {
                         <span>
                             {task?.deadline ? moment(task.deadline).format('YYYY-MM-DD') : new Date().toLocaleDateString()}
                         </span>
-                        <EditOutlined/>
+                        <EditOutlined style={{color:'red'}}/>
                     </Row>
                </Popover>
             )}
