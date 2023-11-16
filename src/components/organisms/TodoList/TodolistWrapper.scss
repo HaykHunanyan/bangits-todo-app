@@ -1,0 +1,38 @@
+.todo_container{
+    height: auto;
+    min-height: 400px;
+    width: calc(100% - 20px);
+    padding: 10px 0px 10px 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.todo_list_row{
+    border: 3px solid gray;
+    width: 100%;
+    text-align: center;
+    >div{
+        text-align: left;
+        border-bottom: 1px dashed black;
+        border-top: 1px solid black;
+        margin-bottom: 10px;
+        padding: 5px;
+        height: 106px;
+        overflow: hidden;
+    }
+}
+.overflow_wrap{
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+.open_section{
+    width:100%
+}
+.close_section{
+    width: 10%;
+}
+.todo_list_title{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
